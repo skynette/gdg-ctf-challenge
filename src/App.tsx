@@ -11,11 +11,11 @@ export default function App() {
 	return (
 		<>
 			<Hero />
-			<Activities />
-			<Founders />
 			<History />
-			<PastEvents />
+			<Founders />
+			<Activities />
 			<Team />
+			<PastEvents />
 		</>
 	);
 }
