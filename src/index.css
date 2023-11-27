@@ -28,11 +28,41 @@
 html,
 body {
 	font-family: "Ubuntu", sans-serif;
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+/* HEADINGS */
+h1 {
+  font-size: var(--fs-h1);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+h5 {
+  font-size: var(--fs-h5);
 }
 
 @layer components {
+  .section {
+    @apply pt-24
+  }
 	.padding-inline {
-		@apply px-20;
+		@apply px-[5%] md:px-12 lg:px-20;
 	}
+
+  .grid-layout {
+    @apply grid grid-cols-1 smmd:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-24 smmd:gap-y-32 mt-32;
+  }
 }

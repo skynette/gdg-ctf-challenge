@@ -5,6 +5,7 @@ import {
 	History,
 	PastEvents,
 	Team,
+    Footer
 } from "./components";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
 			<Activities />
 			<Team />
 			<PastEvents />
+            <Footer />
 		</>
 	);
 }
