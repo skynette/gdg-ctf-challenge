@@ -2,6 +2,7 @@ import ActivityCard from "./components/ActivityCard";
 import { PrimaryButton } from "./components/Button";
 import Nav from "./components/Hero/Nav";
 import PersonCard from "./components/PersonCard";
+import flags from "./components/flags";
 
 export default function App() {
     return (
@@ -89,8 +90,8 @@ export default function App() {
                 <div className="grid-layout">
                     <PersonCard />
                     <PersonCard />
-                    <PersonCard />
-                    <PersonCard />
+                    {/* Here's where you can embed an example flag */}
+                    <PersonCard flag={flags.easyFlag}/>
                     <PersonCard />
                     <PersonCard />
                 </div>
@@ -101,10 +102,6 @@ export default function App() {
                 <h2 className="text-left">GDG Benin Activities</h2>
 
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-10 mt-12">
-                    <ActivityCard />
-                    <ActivityCard />
-                    <ActivityCard />
-                    <ActivityCard />
                     <ActivityCard />
                     <ActivityCard />
                     <ActivityCard />
@@ -145,7 +142,7 @@ export default function App() {
             <section className="padding-inline section">
                 <h2 className="text-left">GDG Benin Past Events</h2>
                 <div className="grid grid-cols-1 gap-8 mt-10 smmd:grid-cols-2 mdlg:grid-cols-3 xl:grid-cols-4">
-                    {(new Array(10)).fill(0).map((_, i) => (<div key={i} className="rounded overflow-hidden"><img src="./assets/history.png" alt="History picture" className="w-full h-full object-cover object-center" /></div>))}
+                    {(new Array(3)).fill(0).map((_, i) => (<div key={i} className="rounded overflow-hidden"><img src="./assets/history.png" alt="History picture" className="w-full h-full object-cover object-center" /></div>))}
                 </div>
             </section>
 
