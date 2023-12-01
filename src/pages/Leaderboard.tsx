@@ -11,7 +11,7 @@ const Leaderboard: React.FC = () => {
     const { data: leaderboardData, isLoading, isError, refetch } = useQuery<LeaderboardUser[], Error>(
         'leaderboard',
         async () => {
-            const response = await fetch('http://localhost:8000/leaderboard/');
+            const response = await fetch('https://gdg-ctf.up.railway.app/leaderboard/');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
