@@ -2,7 +2,7 @@ import PersonCard from "../components/PersonCard/index";
 // import ActivityCard from "../components/ActivityCard/index";
 import Nav from '../components/Nav/Nav'
 import { PrimaryButton } from '../components/Button'
-// import flags from "../components/flags";
+import flags from "../components/flags";
 
 const GDG_TEAM = [
 	{
@@ -20,6 +20,7 @@ const GDG_TEAM = [
     {
         name: "Ugochukwu Nnachor",
         role: "Co Organizer",
+        flag: flags.a_very_easy_fl4g,
     },
     {
         name: "Ojeawere Joseph",
@@ -124,8 +125,8 @@ const Home = () => {
 					<h2 className="font-semibold">GDG Benin Team</h2>
 
 					<div className="grid-layout">
-						{GDG_TEAM.map(({ name, role }, i) => (
-							<PersonCard key={i} name={name} role={role} />
+						{GDG_TEAM.map(({ name, role, flag }, i) => (
+							<PersonCard key={i} name={name} role={role} flag={flag} />
 						))}
 					</div>
 				</section>

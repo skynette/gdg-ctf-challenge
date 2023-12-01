@@ -35,7 +35,10 @@ const SubmitFlag: React.FC = () => {
 
             if (response.ok) {
                 // Display success notification
-                toast.success('Flag submitted successfully');
+                const data = await response.json()
+                console.log("data", data)
+                const score = data.score
+                toast.success(`Flag! ${score} points`);
                 localStorage.setItem('ctfUsername', formData.username);
             } else {
                 // Handle specific error states and display appropriate error messages
@@ -87,7 +90,7 @@ const SubmitFlag: React.FC = () => {
                 <button
                     type="submit"
                     disabled={submitFlagMutation.isLoading}
-                    className={`w-full p-2 bg-blue-500 text-white rounded-md ${
+                    className={`w-full p-2 bg-clr-gdg-green text-white rounded-md ${
                         submitFlagMutation.isLoading ? 'opacity-50 cursor-not-allowed' : ''
                     }`}
                 >
