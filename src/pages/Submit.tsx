@@ -90,7 +90,7 @@ const SubmitFlag: React.FC = () => {
                 <button
                     type="submit"
                     disabled={submitFlagMutation.isLoading}
-                    className={`w-full p-2 bg-blue-500 text-white rounded-md ${
+                    className={`w-full p-2 bg-clr-gdg-green text-white rounded-md ${
                         submitFlagMutation.isLoading ? 'opacity-50 cursor-not-allowed' : ''
                     }`}
                 >
