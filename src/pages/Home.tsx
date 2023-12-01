@@ -1,6 +1,6 @@
 import PersonCard from "../components/PersonCard/index";
 import { PrimaryButton } from "../components/Button";
-import { flags } from "../components/constants";
+import { codersData, flags } from "../components/constants";
 
 const GDG_TEAM = [
 	{
@@ -201,6 +201,49 @@ const Home = () => {
         <p className="text-lg">Remember, this challenge is all about fun, learning, and testing your skills. Happy flag hunting, and may the code be with you! If you encounter any issues or have questions, feel free to reach out to our support team.</p>
 
         <p className="text-lg mt-4">Good luck, and may your flags be plentiful! 🚩🕵️‍♂️</p>
+      </div>
+    </section>
+
+	{/* coders section */}
+	<section className="padding-inline section">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-6">Meet the Coders</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto">
+          {codersData.map((coder, index) => (
+            <div key={index} className="bg-white p-4 rounded shadow-md">
+              <img
+                src={coder.avatarSrc}
+                alt={`${coder.name}'s Avatar`}
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">{coder.name}</h3>
+              <div className="flex justify-center gap-4">
+                <a href={coder.github} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="/icons/github-icon.svg" // replace with actual GitHub icon path
+                    alt="GitHub"
+                    className="w-6 h-6"
+                  />
+                </a>
+                <a href={coder.twitter} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="/icons/twitter-icon.svg" // replace with actual Twitter icon path
+                    alt="Twitter"
+                    className="w-6 h-6"
+                  />
+                </a>
+                <a href={coder.whatsapp} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="/icons/whatsapp-icon.svg" // replace with actual WhatsApp icon path
+                    alt="WhatsApp"
+                    className="w-6 h-6"
+                  />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 			{/* footer */}

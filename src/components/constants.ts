@@ -37,3 +37,21 @@ export const flags = {
 
 export const SERVER_URL =
 	(import.meta.env.VITE_SERVER_URL as string) || "http://127.0.0.1:8000";
+
+export const codersData = [
+		{
+		  name: 'Coder One',
+		  avatarSrc: '/avatars/coder1.jpg', // replace with actual image path
+		  github: 'https://github.com/coder1',
+		  twitter: 'https://twitter.com/coder1',
+		  whatsapp: 'https://wa.me/1234567890', // replace with actual WhatsApp number
+		},
+		{
+		  name: 'Coder Two',
+		  avatarSrc: '/avatars/coder2.jpg', // replace with actual image path
+		  github: 'https://github.com/coder2',
+		  twitter: 'https://twitter.com/coder2',
+		  whatsapp: 'https://wa.me/9876543210', // replace with actual WhatsApp number
+		},
+		// Add more coders as needed
+	  ];
