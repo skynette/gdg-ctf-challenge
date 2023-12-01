@@ -173,10 +173,10 @@ const Home = () => {
 
 			{/* coders section */}
 			<section className="padding-inline section pb-12">
-				<div className="max-w-4xl mx-auto text-center">
-					<h2 className="text-4xl font-bold mb-6">Meet the Coders</h2>
+				<div className="max-w-4xl mx-auto">
+					<h2 className="text-4xl font-semibold mb-6">Meet the Coders</h2>
 
-					<div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto">
+					<div className="grid grid-cols-1 smmd:grid-cols-2 gap-8 mx-auto text-center">
 						{codersData.map((coder, index) => (
 							<div
 								key={index}
