@@ -1,6 +1,8 @@
+// import { Link } from "react-router-dom";
 import PersonCard from "../components/PersonCard/index";
 import { PrimaryButton } from "../components/Button";
 import { codersData, flags } from "../components/constants";
+import { ModalText } from "../components/Modal";
 
 const GDG_TEAM = [
 	{
@@ -56,7 +58,9 @@ const Home = () => {
 					<div className="flex justify-center items-center">
 						<div className="max-w-[760px] text-center">
 							<h1 className="font-bold mb-8">
-								Join the biggest tech community in Benin City
+								Join the biggest tech{" "}
+								<ModalText className="text-fs-h1" qrCodeSVG={<img src="./flagQrCode.svg" alt="" />}>community</ModalText> in
+								Benin City
 							</h1>
 							<p className="text-fs-body-3 mb-12">
 								Ignite your passion for technology, stay ahead in the
@@ -109,10 +113,11 @@ const Home = () => {
 							<p>
 								Major programs for GDG Benin are: The Women Techmakers (WTM)
 								Program, Google IO Extended, DevFest Benin. We also organize
-								other trainings on Google and non-google {flags.cipher_fl4g} technologies, Job
-								opportunities, Incubation for startups, mentorship for
-								beginners, and act as an umbrella for all tech communities in
-								Edo state for the effective growth of the Edo Tech Ecosystem.
+								other trainings on Google and non-google {flags.cipher_fl4g}{" "}
+								technologies, Job opportunities, Incubation for startups,
+								mentorship for beginners, and act as an umbrella for all tech
+								communities in Edo state for the effective growth of the Edo
+								Tech Ecosystem.
 							</p>
 							<p className="text-[10px] text-gray-400 md:hidden">tip: you can find something interesting on desktop mode</p>
 						</div>
@@ -274,29 +279,31 @@ const Home = () => {
 									fill="white"
 								/>
 								<defs>
-									<radialGradient
-										id="paint0_radial_301_17"
-										cx="0"
-										cy="0"
-										r="1"
-										gradientUnits="userSpaceOnUse"
-										gradientTransform="translate(35.5045 143.323) rotate(-90) scale(131.886 122.697)">
-										<stop stop-color="#FFDD55" />
-										<stop offset="0.1" stop-color="#FFDD55" />
-										<stop offset="0.5" stop-color="#FF543E" />
-										<stop offset="1" stop-color="#C837AB" />
-									</radialGradient>
-									<radialGradient
-										id="paint1_radial_301_17"
-										cx="0"
-										cy="0"
-										r="1"
-										gradientUnits="userSpaceOnUse"
-										gradientTransform="translate(-22.1496 9.58639) rotate(78.6776) scale(58.9541 243.072)">
-										<stop stop-color="#3771C8" />
-										<stop offset="0.128" stop-color="#3771C8" />
-										<stop offset="1" stop-color="#6600FF" stop-opacity="0" />
-									</radialGradient>
+									<defs>
+										<radialGradient
+											id="paint0_radial_301_17"
+											cx={0}
+											cy={0}
+											r={1}
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(35.5045 143.323) rotate(-90) scale(131.886 122.697)">
+											<stop stopColor="#FFDD55" />
+											<stop offset={0.1} stopColor="#FFDD55" />
+											<stop offset={0.5} stopColor="#FF543E" />
+											<stop offset={1} stopColor="#C837AB" />
+										</radialGradient>
+										<radialGradient
+											id="paint1_radial_301_17"
+											cx={0}
+											cy={0}
+											r={1}
+											gradientUnits="userSpaceOnUse"
+											gradientTransform="translate(-22.1496 9.58639) rotate(78.6776) scale(58.9541 243.072)">
+											<stop stopColor="#3771C8" />
+											<stop offset={0.128} stopColor="#3771C8" />
+											<stop offset={1} stopColor="#6600FF" stopOpacity={0} />
+										</radialGradient>
+									</defs>
 								</defs>
 							</svg>
 						</a>
