@@ -13,7 +13,6 @@ const SubmitFlag: React.FC = () => {
         flag: '',
     });
 
-    // Use localStorage to retrieve the username on initial load
     useEffect(() => {
         const storedUsername = localStorage.getItem('ctfUsername');
         if (storedUsername) {
@@ -37,11 +36,15 @@ const SubmitFlag: React.FC = () => {
             if (response.ok) {
                 // Display success notification
                 toast.success('Flag submitted successfully');
-                // Save the username to localStorage after a successful submission
                 localStorage.setItem('ctfUsername', formData.username);
             } else {
-                // Display error notification
-                toast.error('Failed to submit flag');
+                // Handle specific error states and display appropriate error messages
+                const data = await response.json();
+                if (response.status === 400) {
+                    toast.error(data.error || 'Failed to submit flag');
+                } else {
+                    toast.error('An unexpected error occurred');
+                }
             }
 
             return response.json();
@@ -70,7 +73,6 @@ const SubmitFlag: React.FC = () => {
                     name="username"
                     value={formData.username}
                     onChange={handleChange}
-                    // Disable username input if it has been stored
                     disabled={localStorage.getItem('ctfUsername') !== null}
                     className="w-full mb-4 p-2 border border-gray-300 rounded-md"
                 />
