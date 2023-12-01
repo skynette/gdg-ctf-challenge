@@ -1,59 +1,57 @@
 import PersonCard from "../components/PersonCard/index";
 // import ActivityCard from "../components/ActivityCard/index";
-import Nav from '../components/Nav/Nav'
-import { PrimaryButton } from '../components/Button'
-import flags from "../components/flags";
+import { PrimaryButton } from "../components/Button";
+import { flags } from "../components/constants";
 
 const GDG_TEAM = [
 	{
 		name: "Joseph Origho",
 		role: "Team Lead",
 	},
-    {
-        name: "Joy Origho",
-        role: "Co Organizier",
-    },
-    {
-        name: "Adedotun Adedigba",
-        role: "Co Organizier",
-    },
-    {
-        name: "Ugochukwu Nnachor",
-        role: "Co Organizer",
-        flag: flags.a_very_easy_fl4g,
-    },
-    {
-        name: "Ojeawere Joseph",
-        role: "Co Organizer",
-    },
-    {
-        name: "Okaome Elizabeth C",
-        role: "Co Organizer",
-    },
-    {
-        name: "Eseoghena Braimah",
-        role: "Co Organizer",
-    },
-    {
-        name: "Osamwonyi Tessy",
-        role: "Co Organizer",
-    },
-    {
-        name: "Omonbude Emmanuel",
-        role: "Co Organizer",
-    },
-    {
-        name: "Godschoice Ononyiwita",
-        role: "Co Organizer",
-    },
+	{
+		name: "Joy Origho",
+		role: "Co Organizier",
+	},
+	{
+		name: "Adedotun Adedigba",
+		role: "Co Organizier",
+	},
+	{
+		name: "Ugochukwu Nnachor",
+		role: "Co Organizer",
+		flag: flags.a_very_easy_fl4g,
+	},
+	{
+		name: "Ojeawere Joseph",
+		role: "Co Organizer",
+	},
+	{
+		name: "Okaome Elizabeth C",
+		role: "Co Organizer",
+	},
+	{
+		name: "Eseoghena Braimah",
+		role: "Co Organizer",
+	},
+	{
+		name: "Osamwonyi Tessy",
+		role: "Co Organizer",
+	},
+	{
+		name: "Omonbude Emmanuel",
+		role: "Co Organizer",
+	},
+	{
+		name: "Godschoice Ononyiwita",
+		role: "Co Organizer",
+	},
 ];
 
 const Home = () => {
-  return (
+	return (
 		<div className="bg-clr-gdg-green-100/10">
 			{/* hero section */}
 			<div className="bg-hero w-full h-screen relative flex items-center justify-center">
-				<Nav />
 				<div className="padding-inline">
 					<div className="flex justify-center items-center">
 						<div className="max-w-[760px] text-center">
@@ -165,7 +163,10 @@ const Home = () => {
 				<div className="flex gap-x-8 items-center">
 					{/* Instagram Icon */}
 					<div>
-						<a href="https://instagram.com/gdgbenin?igshid=YzAwZjE1ZTI0Zg==">
+						<a
+							href="https://instagram.com/gdgbenin?igshid=YzAwZjE1ZTI0Zg=="
+							target="_blank"
+							rel="noreferrer">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -214,7 +215,10 @@ const Home = () => {
 					</div>
 					{/* X(Twitter) Icon */}
 					<div>
-						<a href="https://x.com/gdgbenin?s=11&t=xxWf1c_2rEN7x3vRW1kfCg">
+						<a
+							href="https://x.com/gdgbenin?s=11&t=xxWf1c_2rEN7x3vRW1kfCg"
+							target="_blank"
+							rel="noreferrer">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -235,6 +239,6 @@ const Home = () => {
 			</footer>
 		</div>
 	);
-}
+};
 
-export default Home
+export default Home;

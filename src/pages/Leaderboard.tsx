@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useQuery } from 'react-query';
 import Skeleton from 'react-loading-skeleton';
+import { SERVER_URL } from '../components/constants';
 
 interface LeaderboardUser {
     username: string;
@@ -11,7 +12,7 @@ const Leaderboard: React.FC = () => {
     const { data: leaderboardData, isLoading, isError, refetch } = useQuery<LeaderboardUser[], Error>(
         'leaderboard',
         async () => {
-            const response = await fetch('http://localhost:8000/leaderboard/');
+            const response = await fetch(`${SERVER_URL}leaderboard/`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -32,8 +33,8 @@ const Leaderboard: React.FC = () => {
 
     if (isLoading) {
         return (
-            <div className="container mx-auto p-8">
-                <h1 className="text-3xl font-bold mb-4">Leaderboard</h1>
+            <div className="container mx-auto p-8 mt-">
+                <h1 className="font-semibold text-fs-h4 mb-4">Leaderboard</h1>
                 <table className="min-w-full bg-white border border-gray-300">
                     <thead>
                         <tr>
@@ -65,8 +66,8 @@ const Leaderboard: React.FC = () => {
     const sortedLeaderboard = [...leaderboardData].sort((a, b) => b.points - a.points);
 
     return (
-        <div className="container mx-auto p-8">
-            <h1 className="text-3xl font-bold mb-4">Leaderboard</h1>
+        <div className="container padding-inline mx-auto p-8 mt-20">
+            <h1 className="font-semibold text-fs-h4 mb-4">Leaderboard</h1>
             <table className="min-w-full bg-white border border-gray-300">
                 <thead>
                     <tr>
