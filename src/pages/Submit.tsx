@@ -35,7 +35,10 @@ const SubmitFlag: React.FC = () => {
 
             if (response.ok) {
                 // Display success notification
-                toast.success('Flag submitted successfully');
+                const data = await response.json()
+                console.log("data", data)
+                const score = data.score
+                toast.success(`Flag! ${score} points`);
                 localStorage.setItem('ctfUsername', formData.username);
             } else {
                 // Handle specific error states and display appropriate error messages

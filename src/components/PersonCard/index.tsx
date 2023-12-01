@@ -15,7 +15,7 @@ const index = ({ flag }: PersonCardProps) => {
                     />
                 </div>
                 <div className="mt-4">
-                    <h5 className="text-fs-title font-semibold">Dave Testing</h5>
+                    <h5 className="text-fs-title font-semibold">Dave</h5>
                     <p className="text-fs-body-1">Frontend Engineer</p>
                 </div>
             </div>

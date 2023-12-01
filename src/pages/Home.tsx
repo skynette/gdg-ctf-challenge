@@ -91,7 +91,7 @@ const Home = () => {
                     <PersonCard />
                     <PersonCard />
                     {/* Here's where you can embed an example flag */}
-                    <PersonCard flag={flags.easyFlag}/>
+                    <PersonCard flag={flags.a_very_easy_fl4g}/>
                     <PersonCard />
                     <PersonCard />
                 </div>
