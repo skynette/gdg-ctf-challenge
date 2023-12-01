@@ -66,26 +66,26 @@ const Leaderboard: React.FC = () => {
     const sortedLeaderboard = [...leaderboardData].sort((a, b) => b.points - a.points);
 
     return (
-        <div className="container padding-inline mx-auto p-8 mt-20">
-            <h1 className="font-semibold text-fs-h4 mb-4">Leaderboard</h1>
-            <table className="min-w-full bg-white border border-gray-300">
-                <thead>
-                    <tr>
-                        <th className="py-2 px-4 border-b text-left">Username</th>
-                        <th className="py-2 px-4 border-b text-left">Points</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {sortedLeaderboard.map((user, index) => (
-                        <tr key={index}>
-                            <td className="py-2 px-4 border-b">{user.username}</td>
-                            <td className="py-2 px-4 border-b">{user.points}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-    );
+			<div className="min-h-[calc(100vh_-_152px)] container padding-inline mx-auto py-6 mt-20">
+				<h1 className="font-semibold text-fs-h4 mb-4">Leaderboard</h1>
+				<table className="min-w-full bg-white border border-gray-300">
+					<thead>
+						<tr>
+							<th className="py-2 px-4 border-b text-left">Username</th>
+							<th className="py-2 px-4 border-b text-left">Points</th>
+						</tr>
+					</thead>
+					<tbody>
+						{sortedLeaderboard.map((user, index) => (
+							<tr key={index}>
+								<td className="py-2 px-4 border-b">{user.username}</td>
+								<td className="py-2 px-4 border-b">{user.points}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		);
 };
 
 export default Leaderboard;

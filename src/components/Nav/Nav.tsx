@@ -40,7 +40,7 @@ const Nav = () => {
 						<ul className="flex flex-col lg:flex-row lg:items-center text-right gap-8">
 							<li>
 								<Link
-									to="/"
+									to="/instructions"
 									onClick={clickHandler}
 									className="text-fs-body-3 font-medium text-clr-gdg-green-800 lg:after:w-[0px] lg:after:mx-auto lg:after:h-[2px] lg:after:block lg:after:bg-clr-gdg-green lg:after:transition-[width] lg:after:duration-150 lg:after:ease-linear lg:hover:after:w-full">
 									CTF Challenge

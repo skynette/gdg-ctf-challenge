@@ -71,7 +71,7 @@ const SubmitFlag: React.FC = () => {
 	};
 
 	return (
-		<div className="min-h-screen padding-inline bg-clr-gdg-green-100/10 rounded-md shadow-md flex items-center justify-center">
+		<div className="min-h-[calc(100vh_-_72px)] padding-inline bg-clr-gdg-green-100/10 rounded-md shadow-md flex items-center justify-center">
 			<div className="max-w-2xl mt-10 mx-auto shadow-md py-12 px-8">
 				<h1 className="font-semibold text-fs-h4 mb-4">Submit Flag</h1>
 				<p className="mb-8">
