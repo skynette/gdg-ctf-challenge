@@ -10,8 +10,8 @@ export function Protected({ children }: { children: JSX.Element }) {
 
 	if (!data || isLoading) {
 		return (
-			<div className="min-h-[calc(100vh_-_72px)] padding-inline flex flex-col items-center justify-center">
-				<p>Checking Game Status...</p>
+			<div className="min-h-[calc(100vh_-_72px)] padding-inline flex flex-col items-center justify-center gap-4">
+				<p className="text-lg font-medium">Checking Game Status...</p>
 				<p>Please hold on a moment</p>
 			</div>
 		);
@@ -19,16 +19,16 @@ export function Protected({ children }: { children: JSX.Element }) {
 
 	if (isError) {
 		return (
-			<div>
-				<h1>Something went wrong, oops</h1>
+			<div className="min-h-[calc(100vh_-_72px)] padding-inline flex flex-col items-center justify-center gap-4">
+				<h1 className="text-xl font-medium">Something went wrong, oops</h1>
 				<p>{error.message || "Please try again later"}</p>
 			</div>
 		);
 	}
 
-	if (data.game_started) return children;
-
 	if (!data.game_started) return <Navigate to={"/instructions"} />;
+  
+	if (data.game_started) return children;
 
 	return null;
 }

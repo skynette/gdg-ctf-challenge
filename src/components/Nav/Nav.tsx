@@ -73,7 +73,7 @@ const Nav = () => {
 							</li> */}
 						</ul>
 						<div className="pb-8 lg:pb-0">
-							<PrimaryButton text="Join" />
+							<PrimaryButton text="Join Community" />
 						</div>
 					</div>
 				</div>
