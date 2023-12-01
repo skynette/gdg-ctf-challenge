@@ -1,11 +1,10 @@
 import PersonCard from "../components/PersonCard/index";
 // import ActivityCard from "../components/ActivityCard/index";
-import Nav from '../components/Nav/Nav'
-import { PrimaryButton } from '../components/Button'
-import flags from "../components/flags";
-import { Link as ScrollLink, Element, animateScroll } from "react-scroll";
+import { PrimaryButton } from "../components/Button";
+import { flags } from "../components/constants";
 import toast from "react-hot-toast";
 import { useEffect } from "react";
+import { Link as ScrollLink, Element, animateScroll } from "react-scroll";
 
 const GDG_TEAM = [
 	{
@@ -79,7 +78,6 @@ const revealFlag = () => {
 		<div className="bg-clr-gdg-green-100/10">
 			{/* hero section */}
 			<div className="bg-hero w-full h-screen relative flex items-center justify-center">
-				<Nav />
 				<div className="padding-inline">
 					<div className="flex justify-center items-center">
 						<div className="max-w-[760px] text-center">
@@ -194,7 +192,10 @@ const revealFlag = () => {
 				<div className="flex gap-x-8 items-center">
 					{/* Instagram Icon */}
 					<div>
-						<a href="https://instagram.com/gdgbenin?igshid=YzAwZjE1ZTI0Zg==">
+						<a
+							href="https://instagram.com/gdgbenin?igshid=YzAwZjE1ZTI0Zg=="
+							target="_blank"
+							rel="noreferrer">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -243,7 +244,10 @@ const revealFlag = () => {
 					</div>
 					{/* X(Twitter) Icon */}
 					<div>
-						<a href="https://x.com/gdgbenin?s=11&t=xxWf1c_2rEN7x3vRW1kfCg">
+						<a
+							href="https://x.com/gdgbenin?s=11&t=xxWf1c_2rEN7x3vRW1kfCg"
+							target="_blank"
+							rel="noreferrer">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -271,6 +275,6 @@ const revealFlag = () => {
 			</Element>
 		</div>
 	);
-}
+};
 
-export default Home
+export default Home;
