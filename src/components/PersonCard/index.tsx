@@ -21,7 +21,7 @@ const index = ({ flag, role, name }: PersonCardProps) => {
     >
       <div className="text-center ">
         <h5 className="text-fs-body-3 font-semibold">{name}</h5>
-        <p className="text-fs-body-1">{`${role} ${flag || ""}`}</p>
+        <p className="text-fs-body-1">{`${role}`}</p>
       </div>
     </article>
   );
