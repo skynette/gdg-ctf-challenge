@@ -16,15 +16,18 @@ export default {
 				xl: "1280px",
 			},
 			fontSize: {
-				"fs-h1": "clamp(3rem, 2.7143rem + 1.4286vw, 4rem)",
-				"fs-h2": "clamp(2.5rem, 2.2143rem + 1.4286vw, 3.5rem)",
-				"fs-h3": "clamp(2rem, 1.7143rem + 1.4286vw, 3rem)",
-				"fs-h4": "clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem)",
-				"fs-h5": "clamp(1.25rem, 1.3571rem + 0.7143vw, 2rem)",
-				"fs-title": "clamp(1.25rem, 1.1786rem + 0.3571vw, 1.5rem);",
-				"fs-body-3": "clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem)",
-				"fs-body-2": "clamp(0.875rem, 0.8571rem + 0.1786vw, 1rem)",
-				"fs-body-1": "clamp(0.75rem, 0.7143rem + 0.1786vw, 0.875rem)",
+				"fs-h1": "var(--fs-h1)",
+				"fs-h2": "var(--fs-h2)",
+				"fs-h3": "var(--fs-h3)",
+				"fs-h4": "var(--fs-h4)",
+				"fs-h5": "var(--fs-h5)",
+                "fs-h6": "var(--fs-h6)",
+				"fs-title-3": "var(--fs-title-3)",
+				"fs-title-2": "var(--fs-title-2)",
+				"fs-title-1": "var(--fs-title-1)",
+				"fs-body-3": "var(--fs-body-3)",
+				"fs-body-2": "var(--fs-body-2)",
+				"fs-body-1": "var(--fs-body-1)",
 			},
 			colors: {
 				"clr-gdg-blue": {
@@ -72,6 +75,9 @@ export default {
 					900: "#031f12",
 				},
 			},
+            boxShadow: {
+                card: "0 1px 6px rgba(0, 0, 0, 0.1)",
+            }
 		},
 	},
 	plugins: [],

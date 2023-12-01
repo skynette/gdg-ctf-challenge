@@ -1,68 +1,93 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    /* FONT SIZES */
-    /* HEADINGS */
-    --fs-h1: clamp(3rem, 2.7143rem + 1.4286vw, 4rem);
-    --fs-h2: clamp(2.5rem, 2.2143rem + 1.4286vw, 3.5rem);
-    --fs-h3: clamp(2rem, 1.7143rem + 1.4286vw, 3rem);
-    --fs-h4: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
-    --fs-h5: clamp(1.25rem, 1.3571rem + 0.7143vw, 2rem);
+	/* FONT SIZES */
+	/* HEADINGS */
+	--fs-h1: clamp(2.14rem, 1.5769rem + 1.8771vw, 3.2663rem);
+	--fs-h2: clamp(1.9019rem, 1.4013rem + 1.6688vw, 2.9031rem);
+	--fs-h3: clamp(1.6906rem, 1.2456rem + 1.4833vw, 2.5806rem);
+	--fs-h4: clamp(1.5031rem, 1.1078rem + 1.3177vw, 2.2938rem);
+	--fs-h5: clamp(1.3363rem, 0.9847rem + 1.1719vw, 2.0394rem);
+	--fs-h6: clamp(1.1875rem, 0.875rem + 1.0417vw, 1.8125rem);
 
-    /* BODY */
-    --fs-body-3: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);
-    --fs-body-2: clamp(0.875rem, 0.8571rem + 0.1786vw, 1rem);
-    --fs-body-1: clamp(0.75rem, 0.7143rem + 0.1786vw, 0.875rem);
+	/* BODY */
+	--fs-body-3: clamp(0.875rem, 0.75rem + 0.4167vw, 1.125rem);
+	--fs-body-2: clamp(0.7775rem, 0.6663rem + 0.3708vw, 1rem);
+	--fs-body-1: clamp(0.6913rem, 0.5925rem + 0.3292vw, 0.8888rem);
 
-    /* Colors */
-    --clr-gdg-blue: #4285f4;
-    --clr-gdg-red: #db4437;
-    --clr-gdg-yellow: #f4b400;
-    --clr-gdg-green: #0f9d58;
+	/* TITLE */
+	--fs-title-3: clamp(1.375rem, 0.9375rem + 1.4583vw, 2.25rem);
+	--fs-title-2: clamp(1.2225rem, 0.8338rem + 1.2958vw, 2rem);
+	--fs-title-1: clamp(1.0863rem, 0.7406rem + 1.1521vw, 1.7775rem);
+
+	/* Colors */
+	--clr-gdg-blue: #4285f4;
+	--clr-gdg-red: #db4437;
+	--clr-gdg-yellow: #f4b400;
+	--clr-gdg-green: #0f9d58;
 }
 
 html,
 body {
-    font-family: "Ubuntu", sans-serif;
-    line-height: 1.5;
+	font-family: "Montserrat", sans-serif;
+	line-height: 1.5;
 }
 
 /* HEADINGS */
 h1 {
-    font-size: var(--fs-h1);
-    line-height: 1.1;
+	font-size: var(--fs-h1);
+	line-height: 1.1;
 }
 
 h2 {
-    font-size: var(--fs-h2);
-    line-height: 1.1;
+	font-size: var(--fs-h2);
+	line-height: 1.1;
 }
 
 h3 {
-    font-size: var(--fs-h3);
+	font-size: var(--fs-h3);
 }
 
 h4 {
-    font-size: var(--fs-h4);
+	font-size: var(--fs-h4);
 }
 
 h5 {
-    font-size: var(--fs-h5);
+	font-size: var(--fs-h5);
+}
+
+h6 {
+	font-size: var(--fs-h6);
+}
+
+/* For the menu icon, to create the x upon hover */
+.menu > :first-child {
+	transform: rotate(45deg);
+	transform-origin: left 6px;
+}
+
+.menu > :last-child {
+	transform: rotate(-45deg);
+	transform-origin: left -4px;
+}
+
+.menu > :nth-child(2) {
+	opacity: 0;
 }
 
 @layer components {
-    .section {
-        @apply pt-24;
-    }
-    .padding-inline {
-        @apply px-[5%] md:px-12 lg:px-20;
-    }
+	.section {
+		@apply pt-24;
+	}
+	.padding-inline {
+		@apply px-[5%] md:px-12 lg:px-20;
+	}
 
-    .grid-layout {
-        @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-24 mt-32;
-    }
+	.grid-layout {
+		@apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10;
+	}
 }
