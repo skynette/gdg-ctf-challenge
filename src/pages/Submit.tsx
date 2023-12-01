@@ -25,7 +25,7 @@ const SubmitFlag: React.FC = () => {
 
     const submitFlagMutation = useMutation(
         async () => {
-            const response = await fetch('https://gdg-ctf.up.railway.app/submit-flag/', {
+            const response = await fetch('http://127.0.0.1:8000/submit-flag/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
