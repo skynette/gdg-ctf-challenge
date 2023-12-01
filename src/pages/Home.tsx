@@ -3,6 +3,9 @@ import PersonCard from "../components/PersonCard/index";
 import Nav from '../components/Nav/Nav'
 import { PrimaryButton } from '../components/Button'
 import flags from "../components/flags";
+import { Link as ScrollLink, Element, animateScroll } from "react-scroll";
+import toast from "react-hot-toast";
+import { useEffect } from "react";
 
 const GDG_TEAM = [
 	{
@@ -33,6 +36,7 @@ const GDG_TEAM = [
     {
         name: "Eseoghena Braimah",
         role: "Co Organizer",
+		flag: flags.medium_fl4g,
     },
     {
         name: "Osamwonyi Tessy",
@@ -49,6 +53,28 @@ const GDG_TEAM = [
 ];
 
 const Home = () => {
+	// Function to show the toast when the flag is found
+const revealFlag = () => {
+	toast.success("Found a hidden flag!");
+	};
+
+	useEffect(() => {
+		const handleScroll = () => {
+		  // Check if the user has scrolled to a specific section (adjust the values based on your layout)
+		  if (window.scrollY > 500) {
+			// You can adjust the scroll position where the flag is revealed
+			revealFlag();
+		  }
+		};
+	
+		// Attach the scroll event listener
+		window.addEventListener("scroll", handleScroll);
+	
+		// Clean up the event listener on component unmount
+		return () => {
+		  window.removeEventListener("scroll", handleScroll);
+		};
+	  }, []);
   return (
 		<div className="bg-clr-gdg-green-100/10">
 			{/* hero section */}
@@ -109,7 +135,7 @@ const Home = () => {
 							<p>
 								Major programs for GDG Benin are: The Women Techmakers (WTM)
 								Program, Google IO Extended, DevFest Benin. We also organize
-								other trainings on Google and non-google technologies, Job
+								other trainings on Google and non-google {flags.cipher_fl4g} technologies, Job
 								opportunities, Incubation for startups, mentorship for
 								beginners, and act as an umbrella for all tech communities in
 								Edo state for the effective growth of the Edo Tech Ecosystem.
@@ -131,7 +157,10 @@ const Home = () => {
 					</div>
 				</section>
 			</div>
-
+			 {/* Other content before the flag reveal section */}
+			 <div style={{ height: "500px" }}>
+				Scroll down to reveal the hidden flag!
+			</div>
 			{/* activities */}
 			{/* <section className="padding-inline section">
                 <h2 className="text-left">GDG Benin Activities</h2>
@@ -233,6 +262,13 @@ const Home = () => {
 					© 2023 GDG Benin
 				</p>
 			</footer>
+			{/* Hidden flag section */}
+			<Element name="hiddenFlagSection" className="element">
+				{/* Content of the section, e.g., an image or text */}
+				<div style={{ height: "500px", backgroundColor: "#eee" }}>
+				{/* Flag is hidden until the user scrolls to this section */}
+				</div>
+			</Element>
 		</div>
 	);
 }

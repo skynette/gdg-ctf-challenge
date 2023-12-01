@@ -15,7 +15,8 @@
     "react-hot-toast": "^2.4.1",
     "react-loading-skeleton": "^3.3.1",
     "react-query": "^3.39.3",
-    "react-router-dom": "^6.20.0"
+    "react-router-dom": "^6.20.0",
+    "react-scroll": "^1.9.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
