@@ -1,10 +1,6 @@
 import PersonCard from "../components/PersonCard/index";
-// import ActivityCard from "../components/ActivityCard/index";
 import { PrimaryButton } from "../components/Button";
 import { flags } from "../components/constants";
-import toast from "react-hot-toast";
-import { useEffect } from "react";
-import { Link as ScrollLink, Element, animateScroll } from "react-scroll";
 
 const GDG_TEAM = [
 	{
@@ -52,28 +48,6 @@ const GDG_TEAM = [
 ];
 
 const Home = () => {
-	// Function to show the toast when the flag is found
-const revealFlag = () => {
-	toast.success("Found a hidden flag!");
-	};
-
-	useEffect(() => {
-		const handleScroll = () => {
-		  // Check if the user has scrolled to a specific section (adjust the values based on your layout)
-		  if (window.scrollY > 500) {
-			// You can adjust the scroll position where the flag is revealed
-			revealFlag();
-		  }
-		};
-	
-		// Attach the scroll event listener
-		window.addEventListener("scroll", handleScroll);
-	
-		// Clean up the event listener on component unmount
-		return () => {
-		  window.removeEventListener("scroll", handleScroll);
-		};
-	  }, []);
   return (
 		<div className="bg-clr-gdg-green-100/10">
 			{/* hero section */}
@@ -154,10 +128,6 @@ const revealFlag = () => {
 						))}
 					</div>
 				</section>
-			</div>
-			 {/* Other content before the flag reveal section */}
-			 <div style={{ height: "500px" }}>
-				Scroll down to reveal the hidden flag!
 			</div>
 			{/* activities */}
 			{/* <section className="padding-inline section">
@@ -266,13 +236,6 @@ const revealFlag = () => {
 					© 2023 GDG Benin
 				</p>
 			</footer>
-			{/* Hidden flag section */}
-			<Element name="hiddenFlagSection" className="element">
-				{/* Content of the section, e.g., an image or text */}
-				<div style={{ height: "500px", backgroundColor: "#eee" }}>
-				{/* Flag is hidden until the user scrolls to this section */}
-				</div>
-			</Element>
 		</div>
 	);
 };
