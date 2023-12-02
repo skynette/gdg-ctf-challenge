@@ -46,6 +46,7 @@ const GDG_TEAM = [
 	{
 		name: "Godschoice Ononyiwita",
 		role: "Co Organizer",
+		flag: flags.medium_hard_fl4g
 	},
 ];
 
@@ -111,7 +112,7 @@ const Home = () => {
 							<p>The {''}
 								<ModalText
 									className=""
-									qrCodeSVG={<img src="./flagQrCode.svg" alt="" />}>
+									qrCodeSVG={<img src="./complex.svg" alt="" />}>
 									 GDG Benin
 								</ModalText>{" "} membership has grown from 15members in 2011 to
 								over 1000 in 2023, and has hosted over 50 conferences,

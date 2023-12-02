@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+import { flags } from "../components/constants"
 
 const Instructions = () => {
   return (
@@ -35,7 +37,7 @@ const Instructions = () => {
 								appear as strings, codes, or unique identifiers (e.g.,
 								secret_code_fl4g).
 							</li>
-							<li>Head over to the CTF Submission page.</li>
+							<li>Head over to the <Link to="/ctf" className="text-clr-gdg-green">CTF Submission page</Link>.</li>
 							<li>
 								Choose a unique username for this challenge; this will be how
 								you are identified on the leaderboard.
@@ -64,6 +66,7 @@ const Instructions = () => {
 							username and score will be displayed for bragging rights and
 							recognition.
 						</p>
+						<p>Here is a bonus one to get started <span className="text-clr-gdg-green">{flags.easy_fl4g}</span></p>
 					</div>
 
 					<p className="text-lg">
