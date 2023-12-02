@@ -3,6 +3,7 @@ import PersonCard from "../components/PersonCard/index";
 import { PrimaryButton } from "../components/Button";
 import { EVENTS_PICTURES, codersData, flags } from "../components/constants";
 import { ModalText } from "../components/Modal";
+import toast from "react-hot-toast";
 
 const GDG_TEAM = [
 	{
@@ -84,7 +85,7 @@ const Home = () => {
 					<div className="grid grid-cols-12 grid-rows-6 max-w-md mx-auto">
 						<div className="col-start-1 col-end-8 row-start-1 row-end-5 w-full h-full">
 							<img
-								src="./assets/history.png"
+								src="https://res.cloudinary.com/skycoder/image/upload/v1701517976/dev%20fes/12_tx54jv.jpg"
 								alt="History 1"
 								className="max-w-full h-full object-cover"
 							/>
@@ -92,7 +93,7 @@ const Home = () => {
 						{/* <div className="absolute top-full -right-1/2 -translate-y-1/2 w-[356px]"> */}
 						<div className="col-start-5 col-end-13 row-start-4 row-end-7 w-full h-full">
 							<img
-								src="./assets/history2.png"
+								src="https://res.cloudinary.com/skycoder/image/upload/v1701517017/dev%20fes/2_kybwwq.jpg"
 								alt="History 2"
 								className="max-w-full h-full object-cover"
 							/>
@@ -178,7 +179,7 @@ const Home = () => {
 									alt={`${coder.name}'s Avatar`}
 									className="w-24 h-24 rounded-full mx-auto mb-4"
 								/>
-								<h3 className="text-xl font-semibold mb-2">{coder.name}</h3>
+								<h3 className="text-xl font-semibold mb-2" onClick={() => toast.success(flags.xXx_unbreakable_fl4g_xXx)}>{coder.name}</h3>
 								<div className="flex justify-center gap-4">
 									<a
 										href={coder.github}
