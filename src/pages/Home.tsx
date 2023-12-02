@@ -161,27 +161,8 @@ const Home = () => {
                     <ActivityCard />
                 </div>
             </section> */}
-
-			{/* past events */}
-			<section className="padding-inline section">
-				<h2 className="text-left font-semibold">GDG Benin Past Events</h2>
-				<div className="grid grid-cols-1 gap-8 mt-10 smmd:grid-cols-2 mdlg:grid-cols-3 xl:grid-cols-4">
-					{/* 27 tallies with the number of numbered pictures we have in the assets folder */}
-					{EVENTS_PICTURES.map((url, i) => (
-						<div key={i} className="rounded overflow-hidden">
-							<img
-								src={url}
-								alt={`Event ${i + 1} picture`}
-								loading="lazy"
-								className="w-full h-full object-cover object-center"
-							/>
-						</div>
-					))}
-				</div>
-			</section>
-
-			{/* coders section */}
-			<section className="padding-inline section pb-12">
+{/* coders section */}
+<section className="padding-inline section pb-12">
 				<div className="max-w-4xl mx-auto">
 					<h2 className="text-4xl font-semibold mb-6 text-center ">
 						Meet the Developers
@@ -235,6 +216,25 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
+			{/* past events */}
+			<section className="padding-inline section pb-20">
+				<h2 className="text-left font-semibold">GDG Benin Past Events</h2>
+				<div className="grid grid-cols-1 gap-8 mt-10 smmd:grid-cols-2 mdlg:grid-cols-3 xl:grid-cols-4">
+					{/* 27 tallies with the number of numbered pictures we have in the assets folder */}
+					{EVENTS_PICTURES.map((url, i) => (
+						<div key={i} className="rounded overflow-hidden">
+							<img
+								src={url}
+								alt={`Event ${i + 1} picture`}
+								loading="lazy"
+								className="w-full h-full object-cover object-center"
+							/>
+						</div>
+					))}
+				</div>
+			</section>
+
+			
 		</div>
 	);
 };
