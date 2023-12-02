@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useMutation } from "react-query";
 import { toast } from "react-hot-toast";
 import { SERVER_URL } from "../components/constants";
+import { ModalText } from "../components/Modal";
 
 interface SubmitFlagForm {
 	username: string;
@@ -75,7 +76,11 @@ const SubmitFlag: React.FC = () => {
 			<div className="max-w-2xl mt-10 mx-auto shadow-md py-12 px-8">
 				<h1 className="font-semibold text-fs-h4 mb-4">Submit Flag</h1>
 				<p className="mb-8">
-					You have gotten a flag, submit it here and earn points!!
+					You have gotten a {''} <ModalText
+									className=""
+									qrCodeSVG={<img src="./hardest.svg" alt="" />}>
+									 Flag
+								</ModalText>, submit it here and earn points!!
 				</p>
 				<form onSubmit={handleSubmit}>
 					<input

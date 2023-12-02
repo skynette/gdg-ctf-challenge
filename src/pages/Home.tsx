@@ -61,7 +61,7 @@ const Home = () => {
 							<h1 className="font-bold mb-8">
 								Join the biggest tech{" "}
 								<ModalText
-									className="text-fs-h1"
+									className="text-fs-h1 text-clr-gdg-green-700"
 									qrCodeSVG={<img src="./flagQrCode.svg" alt="" />}>
 									community
 								</ModalText>{" "}
@@ -111,7 +111,7 @@ const Home = () => {
 							</p>
 							<p>The {''}
 								<ModalText
-									className=""
+									className="text-clr-gdg-green-700"
 									qrCodeSVG={<img src="./complex.svg" alt="" />}>
 									 GDG Benin
 								</ModalText>{" "} membership has grown from 15members in 2011 to
@@ -179,7 +179,7 @@ const Home = () => {
 			{/* coders section */}
 			<section className="padding-inline section pb-12">
 				<div className="max-w-4xl mx-auto">
-					<h2 className="text-4xl font-semibold mb-6">Meet the Coders</h2>
+					<h2 className="text-4xl font-semibold mb-6 text-center ">Meet the Developers</h2>
 
 					<div className="grid grid-cols-1 smmd:grid-cols-2 gap-8 mx-auto text-center">
 						{codersData.map((coder, index) => (

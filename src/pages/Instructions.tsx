@@ -56,6 +56,13 @@ const Instructions = () => {
 							Your total score will reflect the cumulative points earned from
 							successfully identifying and submitting flags.
 						</p>
+						<p>
+							If a user submits a flag that has already been submitted by others,
+							the score for that flag will be divided by the number of other people
+							who have already submitted it. This means that the score will be
+							adjusted based on the level of difficulty and the number of successful
+							submissions, encouraging participants to focus on unique and challenging flags.
+						</p>
 					</div>
 
 					<div className="text-left mb-6">

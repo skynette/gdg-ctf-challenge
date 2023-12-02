@@ -14,7 +14,7 @@ const Modal = ({children, handleClose}: {children: ReactNode, handleClose: () =>
 export const ModalText = ({
 	children,
 	qrCodeSVG,
-	className = "text-fs-body-1 ",
+	className = "text-fs-body-1 text-clr-gdg-green-700",
 }: {
 	children: ReactNode;
 	qrCodeSVG: ReactNode;
@@ -32,7 +32,7 @@ export const ModalText = ({
 	return (
 		<>
 			<span
-				className={`text-center cursor-pointer text-clr-gdg-green-700 ${className}`}
+				className={`text-center cursor-pointer ${className}`}
 				onClick={handleOpen}>
 				{children}
 			</span>
