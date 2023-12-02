@@ -16,7 +16,7 @@ const Nav = () => {
 					<div className="w-40 lg:w-60">
 						<Link to="/" onClick={clickHandler}>
 							<img
-								src="./assets/gdg-benin-logo.png"
+								src="/assets/gdg-benin-logo.png"
 								alt="GDG Benin Logo"
 								className="w-full"
 							/>

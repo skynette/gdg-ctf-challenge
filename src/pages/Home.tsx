@@ -46,6 +46,7 @@ const GDG_TEAM = [
 	{
 		name: "Godschoice Ononyiwita",
 		role: "Co Organizer",
+		flag: flags.medium_hard_fl4g
 	},
 ];
 
@@ -60,7 +61,7 @@ const Home = () => {
 							<h1 className="font-bold mb-8">
 								Join the biggest tech{" "}
 								<ModalText
-									className="text-fs-h1"
+									className="text-fs-h1 text-clr-gdg-green-700"
 									qrCodeSVG={<img src="./flagQrCode.svg" alt="" />}>
 									community
 								</ModalText>{" "}
@@ -108,8 +109,12 @@ const Home = () => {
 								in 2018.
 								<span className="hidden md:flex">{flags.avalanche_fl4g}</span>
 							</p>
-							<p>
-								The GDG Benin membership has grown from 15members in 2011 to
+							<p>The {''}
+								<ModalText
+									className="text-clr-gdg-green-700"
+									qrCodeSVG={<img src="./complex.svg" alt="" />}>
+									 GDG Benin
+								</ModalText>{" "} membership has grown from 15members in 2011 to
 								over 1000 in 2023, and has hosted over 50 conferences,
 								bootcamps, and code labs.
 								<span className="hidden lg:flex">{flags.encrypted_fl4g}</span>
@@ -176,7 +181,7 @@ const Home = () => {
 			{/* coders section */}
 			<section className="padding-inline section pb-12">
 				<div className="max-w-4xl mx-auto">
-					<h2 className="text-4xl font-semibold mb-6">Meet the Coders</h2>
+					<h2 className="text-4xl font-semibold mb-6 text-center ">Meet the Developers</h2>
 
 					<div className="grid grid-cols-1 smmd:grid-cols-2 gap-8 mx-auto text-center">
 						{codersData.map((coder, index) => (
