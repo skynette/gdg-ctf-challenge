@@ -56,10 +56,10 @@ const SubmitFlag: React.FC = () => {
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-        if(!(formData.username.length > 0) || !(formData.flag.length > 0)){
-            toast.error("Please fill all fields");
-            return
-        }
+		if (!(formData.username.length > 0) || !(formData.flag.length > 0)) {
+			toast.error("Please fill all fields");
+			return;
+		}
 
 		submitFlagMutation.mutate();
 	};
@@ -76,11 +76,13 @@ const SubmitFlag: React.FC = () => {
 			<div className="max-w-2xl mt-10 mx-auto shadow-md py-12 px-8">
 				<h1 className="font-semibold text-fs-h4 mb-4">Submit Flag</h1>
 				<p className="mb-8">
-					You have gotten a {''} <ModalText
-									className=""
-									qrCodeSVG={<img src="./hardest.svg" alt="" />}>
-									 Flag
-								</ModalText>, submit it here and earn points!!
+					You have gotten a {""}{" "}
+					<ModalText
+						className=""
+						qrCodeSVG={<img src="./hardest.svg" alt="" />}>
+						Flag
+					</ModalText>
+					, submit it here and earn points!!
 				</p>
 				<form onSubmit={handleSubmit}>
 					<input

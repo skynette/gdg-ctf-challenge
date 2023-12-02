@@ -46,7 +46,7 @@ const GDG_TEAM = [
 	{
 		name: "Godschoice Ononyiwita",
 		role: "Co Organizer",
-		flag: flags.medium_hard_fl4g
+		flag: flags.medium_hard_fl4g,
 	},
 ];
 
@@ -109,14 +109,16 @@ const Home = () => {
 								in 2018.
 								<span className="hidden md:flex">{flags.avalanche_fl4g}</span>
 							</p>
-							<p>The {''}
+							<p>
+								The {""}
 								<ModalText
 									className="text-clr-gdg-green-700"
 									qrCodeSVG={<img src="./complex.svg" alt="" />}>
-									 GDG Benin
-								</ModalText>{" "} membership has grown from 15members in 2011 to
-								over 1000 in 2023, and has hosted over 50 conferences,
-								bootcamps, and code labs.
+									GDG Benin
+								</ModalText>{" "}
+								membership has grown from 15members in 2011 to over 1000 in
+								2023, and has hosted over 50 conferences, bootcamps, and code
+								labs.
 								<span className="hidden lg:flex">{flags.encrypted_fl4g}</span>
 							</p>
 							<p>
@@ -164,13 +166,13 @@ const Home = () => {
 			<section className="padding-inline section">
 				<h2 className="text-left font-semibold">GDG Benin Past Events</h2>
 				<div className="grid grid-cols-1 gap-8 mt-10 smmd:grid-cols-2 mdlg:grid-cols-3 xl:grid-cols-4">
-                    {/* 27 tallies with the number of numbered pictures we have in the assets folder */}
+					{/* 27 tallies with the number of numbered pictures we have in the assets folder */}
 					{new Array(27).fill(0).map((_, i) => (
 						<div key={i} className="rounded overflow-hidden">
 							<img
 								src={`/assets/${i + 1}.jpg`}
 								alt={`Event ${i + 1} picture`}
-                                loading="lazy"
+								loading="lazy"
 								className="w-full h-full object-cover object-center"
 							/>
 						</div>
@@ -181,7 +183,9 @@ const Home = () => {
 			{/* coders section */}
 			<section className="padding-inline section pb-12">
 				<div className="max-w-4xl mx-auto">
-					<h2 className="text-4xl font-semibold mb-6 text-center ">Meet the Developers</h2>
+					<h2 className="text-4xl font-semibold mb-6 text-center ">
+						Meet the Developers
+					</h2>
 
 					<div className="grid grid-cols-1 smmd:grid-cols-2 gap-8 mx-auto text-center">
 						{codersData.map((coder, index) => (
