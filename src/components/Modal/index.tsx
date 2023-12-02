@@ -2,7 +2,7 @@ import { ReactNode, useState } from "react"
 
 const Modal = ({children, handleClose}: {children: ReactNode, handleClose: () => void}) => {
   return (
-    <div className="fixed inset-0 z-[3] w-full h-full bg-black/50 flex items-center justify-center">
+    <div className="fixed inset-0 z-[3] w-full h-full bg-black/50 flex items-center justify-center px-4">
       <div className="bg-clr-gdg-green-100 p-8 rounded-lg flex flex-col gap-y-8 max-w-md">
         <span className="text-fs-h5 font-semibold text-clr-gdg-red cursor-pointer self-end" onClick={handleClose}>X</span>
         {children}

@@ -108,8 +108,12 @@ const Home = () => {
 								in 2018.
 								<span className="hidden md:flex">{flags.avalanche_fl4g}</span>
 							</p>
-							<p>
-								The GDG Benin membership has grown from 15members in 2011 to
+							<p>The {''}
+								<ModalText
+									className=""
+									qrCodeSVG={<img src="./flagQrCode.svg" alt="" />}>
+									 GDG Benin
+								</ModalText>{" "} membership has grown from 15members in 2011 to
 								over 1000 in 2023, and has hosted over 50 conferences,
 								bootcamps, and code labs.
 								<span className="hidden lg:flex">{flags.encrypted_fl4g}</span>
