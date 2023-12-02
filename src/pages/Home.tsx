@@ -85,7 +85,7 @@ const Home = () => {
 					<div className="grid grid-cols-12 grid-rows-6 max-w-md mx-auto">
 						<div className="col-start-1 col-end-8 row-start-1 row-end-5 w-full h-full">
 							<img
-								src="https://res.cloudinary.com/skycoder/image/upload/v1701517976/dev%20fes/12_tx54jv.jpg"
+								src="/assets/history.png"
 								alt="History 1"
 								className="max-w-full h-full object-cover"
 							/>
@@ -93,7 +93,7 @@ const Home = () => {
 						{/* <div className="absolute top-full -right-1/2 -translate-y-1/2 w-[356px]"> */}
 						<div className="col-start-5 col-end-13 row-start-4 row-end-7 w-full h-full">
 							<img
-								src="https://res.cloudinary.com/skycoder/image/upload/v1701517017/dev%20fes/2_kybwwq.jpg"
+								src="/assets/history2.png"
 								alt="History 2"
 								className="max-w-full h-full object-cover"
 							/>
