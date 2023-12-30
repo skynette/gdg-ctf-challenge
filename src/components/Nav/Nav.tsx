@@ -7,7 +7,7 @@ const Nav = () => {
 
 	const clickHandler = () => {
 		setIsMenuOpen(false);
-	}
+	};
 
 	return (
 		<div className="bg-white fixed z-[1] top-0 left-0 w-full shadow-card">
@@ -37,7 +37,7 @@ const Nav = () => {
 						isMenuOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
 					}`}>
 					<div className="overflow-hidden flex flex-col lg:flex-row items-end lg:items-center gap-8 lg:overflow-visible">
-						<ul className="inline">
+						<ul className="flex flex-col lg:flex-row lg:items-center text-right gap-8">
 							<li>
 								<Link
 									to="/instructions"
