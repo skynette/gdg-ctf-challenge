@@ -1,8 +1,9 @@
 // import { Link } from "react-router-dom";
 import PersonCard from "../components/PersonCard/index";
 import { PrimaryButton } from "../components/Button";
-import { codersData, flags } from "../components/constants";
+import { EVENTS_PICTURES, codersData, flags } from "../components/constants";
 import { ModalText } from "../components/Modal";
+import toast from "react-hot-toast";
 
 const GDG_TEAM = [
 	{
@@ -84,7 +85,7 @@ const Home = () => {
 					<div className="grid grid-cols-12 grid-rows-6 max-w-md mx-auto">
 						<div className="col-start-1 col-end-8 row-start-1 row-end-5 w-full h-full">
 							<img
-								src="./assets/history.png"
+								src="/assets/history.png"
 								alt="History 1"
 								className="max-w-full h-full object-cover"
 							/>
@@ -92,7 +93,7 @@ const Home = () => {
 						{/* <div className="absolute top-full -right-1/2 -translate-y-1/2 w-[356px]"> */}
 						<div className="col-start-5 col-end-13 row-start-4 row-end-7 w-full h-full">
 							<img
-								src="./assets/history2.png"
+								src="/assets/history2.png"
 								alt="History 2"
 								className="max-w-full h-full object-cover"
 							/>
@@ -161,27 +162,8 @@ const Home = () => {
                     <ActivityCard />
                 </div>
             </section> */}
-
-			{/* past events */}
-			<section className="padding-inline section">
-				<h2 className="text-left font-semibold">GDG Benin Past Events</h2>
-				<div className="grid grid-cols-1 gap-8 mt-10 smmd:grid-cols-2 mdlg:grid-cols-3 xl:grid-cols-4">
-					{/* 27 tallies with the number of numbered pictures we have in the assets folder */}
-					{new Array(27).fill(0).map((_, i) => (
-						<div key={i} className="rounded overflow-hidden">
-							<img
-								src={`/assets/${i + 1}.jpg`}
-								alt={`Event ${i + 1} picture`}
-								loading="lazy"
-								className="w-full h-full object-cover object-center"
-							/>
-						</div>
-					))}
-				</div>
-			</section>
-
-			{/* coders section */}
-			<section className="padding-inline section pb-12">
+{/* coders section */}
+<section className="padding-inline section pb-12">
 				<div className="max-w-4xl mx-auto">
 					<h2 className="text-4xl font-semibold mb-6 text-center ">
 						Meet the Developers
@@ -197,7 +179,7 @@ const Home = () => {
 									alt={`${coder.name}'s Avatar`}
 									className="w-24 h-24 rounded-full mx-auto mb-4"
 								/>
-								<h3 className="text-xl font-semibold mb-2">{coder.name}</h3>
+								<h3 className="text-xl font-semibold mb-2" onClick={() => toast.success(flags.xXx_unbreakable_fl4g_xXx)}>{coder.name}</h3>
 								<div className="flex justify-center gap-4">
 									<a
 										href={coder.github}
@@ -235,6 +217,25 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
+			{/* past events */}
+			<section className="padding-inline section pb-20">
+				<h2 className="text-left font-semibold">GDG Benin Past Events</h2>
+				<div className="grid grid-cols-1 gap-8 mt-10 smmd:grid-cols-2 mdlg:grid-cols-3 xl:grid-cols-4">
+					{/* 27 tallies with the number of numbered pictures we have in the assets folder */}
+					{EVENTS_PICTURES.map((url, i) => (
+						<div key={i} className="rounded overflow-hidden">
+							<img
+								src={url}
+								alt={`Event ${i + 1} picture`}
+								loading="lazy"
+								className="w-full h-full object-cover object-center"
+							/>
+						</div>
+					))}
+				</div>
+			</section>
+
+			
 		</div>
 	);
 };

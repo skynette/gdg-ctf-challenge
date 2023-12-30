@@ -26,7 +26,7 @@ const Leaderboard: React.FC = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             refetch();
-        }, 100000);
+        }, 1000);
 
         return () => clearInterval(intervalId);
     }, [refetch]);

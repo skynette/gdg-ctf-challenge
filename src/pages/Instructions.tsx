@@ -39,7 +39,7 @@ const Instructions = () => {
 							</li>
 							<li>Head over to the <Link to="/ctf" className="text-clr-gdg-green">CTF Submission page</Link>.</li>
 							<li>
-								Choose a unique username for this challenge; this will be how
+								Choose a unique username for this <span className="text-xs">{flags.hard_fl4g}</span> challenge; this will be how
 								you are identified on the leaderboard.
 							</li>
 							<li>
@@ -51,17 +51,17 @@ const Instructions = () => {
 					<div className="text-left mb-6">
 						<h3 className="text-2xl font-semibold mb-2">Scoring:</h3>
 						<p>
-							Each flag you submit has an associated score based on its
+							Each {flags.whisper_fl4g} you submit has an associated score based on its
 							difficulty. The more challenging the flag, the higher the score.
 							Your total score will reflect the cumulative points earned from
-							successfully identifying and submitting flags.
+							successfully identifying and submitting {flags.hidden_fl4g}.
 						</p>
 						<p>
 							If a user submits a flag that has already been submitted by others,
 							the score for that flag will be divided by the number of other people
 							who have already submitted it. This means that the score will be
 							adjusted based on the level of difficulty and the number of successful
-							submissions, encouraging participants to focus on unique and challenging flags.
+							submissions, encouraging participants to focus on unique, {flags.hidden_fl4g}, and challenging flags.
 						</p>
 					</div>
 
@@ -73,14 +73,15 @@ const Instructions = () => {
 							username and score will be displayed for bragging rights and
 							recognition.
 						</p>
+						<p>You'd be surprised how many links are embedded with flags in or what you can click to reveal them :) </p>
 						<p>Here is a bonus one to get started <span className="text-clr-gdg-green">{flags.easy_fl4g}</span></p>
 					</div>
 
 					<p className="text-lg">
 						Remember, this challenge is all about fun, learning, and testing
-						your skills. Happy flag hunting, and may the code be with you! If
+						your observation skills. Happy {flags.encrypted_message_fl4g} hunting, and may the code be with you! If
 						you encounter any issues or have questions, feel free to reach out
-						to our support team.
+						to our awesome devs.
 					</p>
 
 					<p className="text-lg mt-4">
