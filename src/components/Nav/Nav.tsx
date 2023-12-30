@@ -37,7 +37,7 @@ const Nav = () => {
 						isMenuOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
 					}`}>
 					<div className="overflow-hidden flex flex-col lg:flex-row items-end lg:items-center gap-8 lg:overflow-visible">
-						<ul className="flex flex-col lg:flex-row lg:items-center text-right gap-8">
+						<ul className="inline">
 							<li>
 								<Link
 									to="/instructions"
