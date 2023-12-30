@@ -20,10 +20,10 @@ The CTF Challenge utilizes the following technologies and tools:
 
 ## Pages
 The Challenge consists of the following pages and flags can be found at them (or maybe not):
-- [Home Page]() 
-- [Instructions Page]()
-- [Leaderboard Page]()
-- [Submit Page]()
+- [Home Page](https://gdg-benin.vercel.app/) 
+- [Instructions Page](https://gdg-benin.vercel.app/instructions)
+- [Leaderboard Page](https://gdg-benin.vercel.app/leaderboard)
+- [Submit Page](https://gdg-benin.vercel.app/ctf)
 
 ## Capture The Flag (CTF) Challenge Instructions
 
