@@ -2,6 +2,7 @@
 
 ## Description
 This project is a web-based game where players explore the website to find flags and earn points. Each flag has a different point value, which can be viewed [here](#flags-and-their-values).
+backend server code can be found here [CTF server](https://github.com/skynette/ctf-server)
 
 > Created by [Joshua](https://github.com/skynette/) and [Dave](https://github.com/d-a-ve)
 
