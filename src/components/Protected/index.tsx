@@ -1,9 +1,9 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { useGameStatus } from "../../hooks/useGameStatus";
 
 export function Protected({ children }: { children: JSX.Element }) {
 	const { data, isError, error, isLoading } = useGameStatus();
-	const currentPath = window.location.pathname;
+	const { pathname: currentPath } = useLocation();
 
 	if (currentPath === "/game-control" || currentPath === "/instructions")
 		return children;
