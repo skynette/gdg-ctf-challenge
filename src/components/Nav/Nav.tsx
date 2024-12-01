@@ -22,7 +22,7 @@ const Nav = () => {
 							/>
 						</Link>
 					</div>
-					<div
+					<button
 						className={`${
 							isMenuOpen ? "menu" : ""
 						} w-6 flex flex-col lg:hidden gap-y-2 cursor-pointer`}
@@ -30,7 +30,7 @@ const Nav = () => {
 						<div className="w-full h-[2px] bg-clr-gdg-green-800 transition-[transform] duration-200 ease-linear" />
 						<div className="w-full h-[2px] bg-clr-gdg-green-800 transition-[transform] duration-200 ease-linear" />
 						<div className="w-full h-[2px] bg-clr-gdg-green-800 transition-[transform] duration-200 ease-linear" />
-					</div>
+					</button>
 				</div>
 				<div
 					className={`grid lg:flex lg:flex-row items-end transition-[grid-template-rows] overflow-hidden lg:overflow-visible duration-300 ease-in-out ${

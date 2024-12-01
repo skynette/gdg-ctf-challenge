@@ -8,6 +8,8 @@ import Nav from "./components/Nav/Nav";
 import FlagPage from "./pages/FlagPage";
 import Instructions from "./pages/Instructions";
 import Footer from "./components/Footer";
+import GameControl from "./pages/GameControl";
+import { Protected } from "./components/Protected";
 
 const queryClient = new QueryClient();
 
@@ -20,7 +22,9 @@ export default function App() {
 						element={
 							<>
 								<Nav />
+								<Protected>
 								<Outlet />
+								</Protected>
                 <Footer />
 							</>
 						}>
@@ -28,6 +32,7 @@ export default function App() {
 						<Route path="/instructions" element={<Instructions />} />
 						<Route path="/leaderboard" element={<Leaderboard />} />
 						<Route path="/ctf" element={<SubmitFlag />} />
+						<Route path="/game-control" element={<GameControl />} />
 						<Route path="/sxctra249sceahceae34hec/:flag" element={<FlagPage />} />
 					</Route>
 				</Routes>
