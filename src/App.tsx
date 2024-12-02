@@ -3,7 +3,6 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav/Nav";
-import { Protected } from "./components/Protected";
 import FlagPage from "./pages/FlagPage";
 import GameControl from "./pages/GameControl";
 import Home from "./pages/Home";
@@ -22,9 +21,7 @@ export default function App() {
 						element={
 							<>
 								<Nav />
-								<Protected>
-									<Outlet />
-								</Protected>
+								<Outlet />
 								<Footer />
 							</>
 						}>

@@ -1,14 +1,14 @@
-// import { Link } from "react-router-dom";
-import PersonCard from "../components/PersonCard/index";
 import { PrimaryButton } from "../components/Button";
-import { EVENTS_PICTURES, codersData, flags } from "../components/constants";
+import { FlagFlip } from "../components/FlagFlip";
 import { ModalText } from "../components/Modal";
-import toast from "react-hot-toast";
+import PersonCard from "../components/PersonCard/index";
+import { EVENTS_PICTURES, codersData, flags } from "../components/constants";
 
 const GDG_TEAM = [
 	{
 		name: "Joseph Origho",
 		role: "Team Lead",
+		flags: flags.firestorm_fl4g,
 	},
 	{
 		name: "Joy Origho",
@@ -25,7 +25,7 @@ const GDG_TEAM = [
 	},
 	{
 		name: "Ojeawere Joseph",
-		role: "Co Organizer",
+		role: `Co ${flags.medium_fl4g} Organizer`,
 	},
 	{
 		name: "Okaome Elizabeth C",
@@ -101,7 +101,11 @@ const Home = () => {
 					</div>
 
 					<div className="md:pt-20">
-						<h2 className="mb-6 font-semibold">Brief History of GDG Benin</h2>
+						<FlagFlip className="mb-6 h-24" flag={flags.encrypted_fl4g}>
+							<h2 className="font-semibold text-left">
+								Brief History of GDG Benin
+							</h2>
+						</FlagFlip>
 						<div className="flex flex-col gap-4">
 							<p>
 								GDG Benin started in 2011. It was founded by Charles Odilli
@@ -162,8 +166,8 @@ const Home = () => {
                     <ActivityCard />
                 </div>
             </section> */}
-{/* coders section */}
-<section className="padding-inline section pb-12">
+			{/* coders section */}
+			<section className="padding-inline section pb-12">
 				<div className="max-w-4xl mx-auto">
 					<h2 className="text-4xl font-semibold mb-6 text-center ">
 						Meet the Developers
@@ -179,7 +183,11 @@ const Home = () => {
 									alt={`${coder.name}'s Avatar`}
 									className="w-24 h-24 rounded-full mx-auto mb-4"
 								/>
-								<h3 className="text-xl font-semibold mb-2" onClick={() => toast.success(flags.xXx_unbreakable_fl4g_xXx)}>{coder.name}</h3>
+								<FlagFlip
+									className="mb-2 h-12"
+									flag={flags.xXx_unbreakable_fl4g_xXx}>
+									<h3 className="text-xl font-semibold">{coder.name}</h3>
+								</FlagFlip>
 								<div className="flex justify-center gap-4">
 									<a
 										href={coder.github}
@@ -219,23 +227,30 @@ const Home = () => {
 			</section>
 			{/* past events */}
 			<section className="padding-inline section pb-20">
-				<h2 className="text-left font-semibold">GDG Benin Past Events</h2>
+				<div className="flex items-center flex-wrap gap-1">
+					<h2 className="text-left font-semibold">GDG Benin Past Events</h2>
+					<p className="text-xs text-clr-gdg-green-200">
+						{flags.firestorm_fl4g}
+					</p>
+				</div>
 				<div className="grid grid-cols-1 gap-8 mt-10 smmd:grid-cols-2 mdlg:grid-cols-3 xl:grid-cols-4">
 					{/* 27 tallies with the number of numbered pictures we have in the assets folder */}
-					{EVENTS_PICTURES.map((url, i) => (
+					{EVENTS_PICTURES.map(({ url, flag }, i) => (
 						<div key={i} className="rounded overflow-hidden">
-							<img
-								src={url}
-								alt={`Event ${i + 1} picture`}
-								loading="lazy"
-								className="w-full h-full object-cover object-center"
-							/>
+							<FlagFlip
+								className={`${i === 9 || i === 10 ? "h-64" : "h-52"}`}
+								flag={flag}>
+								<img
+									src={url}
+									alt={`Event ${i + 1} picture`}
+									loading="lazy"
+									className="w-full h-full object-cover object-center"
+								/>
+							</FlagFlip>
 						</div>
 					))}
 				</div>
 			</section>
-
-			
 		</div>
 	);
 };

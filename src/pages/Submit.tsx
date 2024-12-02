@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useMutation } from "react-query";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
-import { SERVER_URL } from "../components/constants";
+import { useMutation } from "react-query";
 import { ModalText } from "../components/Modal";
+import { TimeIntervalFlag } from "../components/TimeIntervalFlag";
+import { SERVER_URL, flags } from "../components/constants";
+import { useGameStatus } from "../hooks/useGameStatus";
 
 interface SubmitFlagForm {
 	username: string;
@@ -14,6 +16,7 @@ const SubmitFlag: React.FC = () => {
 		username: "",
 		flag: "",
 	});
+	const { data: gameStatus } = useGameStatus();
 
 	useEffect(() => {
 		const storedUsername = localStorage.getItem("ctfUsername");
@@ -40,6 +43,7 @@ const SubmitFlag: React.FC = () => {
 			console.log("data", data);
 			const score = data.score;
 			toast.success(`Flag! ${score} points`);
+			setFormData((prev) => ({ ...prev, flag: "" }));
 			localStorage.setItem("ctfUsername", formData.username);
 		} else {
 			// Handle specific error states and display appropriate error messages
@@ -73,7 +77,7 @@ const SubmitFlag: React.FC = () => {
 
 	return (
 		<div className="min-h-[calc(100vh_-_72px)] padding-inline bg-clr-gdg-green-100/10 rounded-md shadow-md flex items-center justify-center">
-			<div className="max-w-2xl mt-10 mx-auto shadow-md py-12 px-8">
+			<div className="max-w-xl w-full mt-10 mx-auto shadow-md py-12 px-8">
 				<h1 className="font-semibold text-fs-h4 mb-4">Submit Flag</h1>
 				<p className="mb-8">
 					You have gotten a {""}{" "}
@@ -104,15 +108,17 @@ const SubmitFlag: React.FC = () => {
 					/>
 					<button
 						type="submit"
-						disabled={submitFlagMutation.isLoading}
-						className={`w-full p-3 bg-clr-gdg-green text-white rounded-md hover:bg-clr-gdg-green-600 ${
-							submitFlagMutation.isLoading
-								? "opacity-50 cursor-not-allowed"
-								: ""
-						}`}>
+						disabled={!gameStatus?.game_started || submitFlagMutation.isLoading}
+						className="w-full p-3 bg-clr-gdg-green text-white rounded-md hover:bg-clr-gdg-green-600 disabled:opacity-50 disabled:cursor-not-allowed">
 						{submitFlagMutation.isLoading ? "Submitting..." : "Submit Flag"}
 					</button>
 				</form>
+			</div>
+			<div className="absolute top-1/3 left-4">
+				<TimeIntervalFlag durationInMins={3} flag={flags.top_secret_fl4g} />
+			</div>
+			<div className="absolute bottom-24 left-1/2">
+				<TimeIntervalFlag durationInMins={5} flag={flags.super_hard_fl4g} />
 			</div>
 		</div>
 	);

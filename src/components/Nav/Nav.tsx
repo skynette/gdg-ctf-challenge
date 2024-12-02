@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PrimaryButton } from "../Button";
+import { TimeIntervalFlag } from "../TimeIntervalFlag";
+import { flags } from "../constants";
 
 const Nav = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,6 +24,7 @@ const Nav = () => {
 							/>
 						</Link>
 					</div>
+					<TimeIntervalFlag durationInMins={2} flag={flags.sphinx_fl4g} />
 					<button
 						className={`${
 							isMenuOpen ? "menu" : ""

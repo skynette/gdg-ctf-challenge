@@ -59,34 +59,100 @@ export const codersData = [
 	// Add more coders as needed
 ];
 
-export const EVENTS_PICTURES = [
-	"https://res.cloudinary.com/skycoder/image/upload/v1701516739/dev%20fes/1_x3w9ul.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517039/dev%20fes/2_yj55hs.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517064/dev%20fes/3_som4aw.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517064/dev%20fes/3_som4aw.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517480/dev%20fes/7_f9n1x2.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517492/dev%20fes/5_ywofjh.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517503/dev%20fes/4_sgv1zg.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517526/dev%20fes/6_dqjqrv.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517963/dev%20fes/11_bfbxgw.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517964/dev%20fes/10_fyfzox.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517964/dev%20fes/10_fyfzox.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517976/dev%20fes/12_tx54jv.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517996/dev%20fes/13_cvaazr.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701517996/dev%20fes/14_i5tf9y.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701518043/dev%20fes/9_rxvsre.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701518071/dev%20fes/8_qjary7.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701518594/dev%20fes/15_va1g3w.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701518648/dev%20fes/16_rpasrk.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701518677/dev%20fes/20_kxlzmt.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701518680/dev%20fes/18_tqknu2.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701518681/dev%20fes/19_dqwbgl.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701518686/dev%20fes/17_ac0xqh.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701518695/dev%20fes/21_riqmaf.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701519106/dev%20fes/24_pbxp9m.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701519111/dev%20fes/22_oc7y0k.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701519118/dev%20fes/27_rtdbji.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701519125/dev%20fes/25_ktz2pe.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701519130/dev%20fes/26_uwkuy5.jpg",
-	"https://res.cloudinary.com/skycoder/image/upload/v1701519130/dev%20fes/23_gmvd4n.jpg",
+export const EVENTS_PICTURES: { url: string; flag?: string }[] = [
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701516739/dev%20fes/1_x3w9ul.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517039/dev%20fes/2_yj55hs.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517064/dev%20fes/3_som4aw.jpg",
+		flag: flags.quantum_fl4g,
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517064/dev%20fes/3_som4aw.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517480/dev%20fes/7_f9n1x2.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517492/dev%20fes/5_ywofjh.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517503/dev%20fes/4_sgv1zg.jpg",
+		flag: flags.xXx_unbreakable_fl4g_xXx,
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517526/dev%20fes/6_dqjqrv.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517963/dev%20fes/11_bfbxgw.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517964/dev%20fes/10_fyfzox.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517964/dev%20fes/10_fyfzox.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517976/dev%20fes/12_tx54jv.jpg",
+		flag: flags.firestorm_fl4g,
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517996/dev%20fes/13_cvaazr.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701517996/dev%20fes/14_i5tf9y.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701518043/dev%20fes/9_rxvsre.jpg",
+		flag: flags.very_easy_fl4g,
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701518071/dev%20fes/8_qjary7.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701518594/dev%20fes/15_va1g3w.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701518648/dev%20fes/16_rpasrk.jpg",
+		flag: flags.avalanche_fl4g,
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701518677/dev%20fes/20_kxlzmt.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701518680/dev%20fes/18_tqknu2.jpg",
+		flag: flags.jigsaw_fl4g,
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701518681/dev%20fes/19_dqwbgl.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701518686/dev%20fes/17_ac0xqh.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701518695/dev%20fes/21_riqmaf.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701519106/dev%20fes/24_pbxp9m.jpg",
+		flag: flags.enigma_fl4g,
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701519111/dev%20fes/22_oc7y0k.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701519118/dev%20fes/27_rtdbji.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701519125/dev%20fes/25_ktz2pe.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701519130/dev%20fes/26_uwkuy5.jpg",
+	},
+	{
+		url: "https://res.cloudinary.com/skycoder/image/upload/v1701519130/dev%20fes/23_gmvd4n.jpg",
+		flag: flags.tricky_fl4g,
+	},
 ];
