@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useMutation } from "react-query";
 import { ModalText } from "../components/Modal";
+import { PageLoader } from "../components/PageLoader";
 import { TimeIntervalFlag } from "../components/TimeIntervalFlag";
 import { SERVER_URL, flags } from "../components/constants";
 import { useGameStatus } from "../hooks/useGameStatus";
+import { useUser } from "../hooks/useUser";
 
 interface SubmitFlagForm {
 	username: string;
@@ -17,37 +19,37 @@ const SubmitFlag: React.FC = () => {
 		flag: "",
 	});
 	const { data: gameStatus } = useGameStatus();
+	const { data: user, isLoading: fetchingUser } = useUser();
 
 	useEffect(() => {
-		const storedUsername = localStorage.getItem("ctfUsername");
-		if (storedUsername) {
-			setFormData((prevData) => ({
-				...prevData,
-				username: storedUsername,
-			}));
-		}
-	}, []);
+		if (!user) return;
+
+		if (!user.username) return;
+
+		const username = user.username;
+
+		setFormData((prev) => ({ ...prev, username }));
+	}, [user]);
 
 	const submitFlagMutation = useMutation(async () => {
+		if (!user || !user.token) return;
+
 		const response = await fetch(`${SERVER_URL}submit-flag/`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify(formData),
+			body: JSON.stringify({ flag: formData.flag, token: user.token }),
 		});
+		const data = await response.json();
 
 		if (response.ok) {
 			// Display success notification
-			const data = await response.json();
-			console.log("data", data);
 			const score = data.score;
 			toast.success(`Flag! ${score} points`);
 			setFormData((prev) => ({ ...prev, flag: "" }));
-			localStorage.setItem("ctfUsername", formData.username);
 		} else {
 			// Handle specific error states and display appropriate error messages
-			const data = await response.json();
 			if (response.status === 400) {
 				toast.error(data.error || "Failed to submit flag");
 			} else {
@@ -55,13 +57,19 @@ const SubmitFlag: React.FC = () => {
 			}
 		}
 
-		return response.json();
+		return data;
 	});
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+
 		if (!(formData.username.length > 0) || !(formData.flag.length > 0)) {
 			toast.error("Please fill all fields");
+			return;
+		}
+
+		if (!user || !user.token) {
+			toast.error("Something went wrong. Please register your username again.");
 			return;
 		}
 
@@ -74,6 +82,8 @@ const SubmitFlag: React.FC = () => {
 			[e.target.name]: e.target.value,
 		});
 	};
+
+	if (!user || fetchingUser) return <PageLoader />;
 
 	return (
 		<div className="min-h-[calc(100vh_-_72px)] padding-inline bg-clr-gdg-green-100/10 rounded-md shadow-md flex items-center justify-center">

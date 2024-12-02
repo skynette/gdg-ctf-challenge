@@ -6,6 +6,7 @@ import { useGameStatus } from "../hooks/useGameStatus";
 
 const GameControl: React.FC = () => {
 	const [gameStatusToggle, setGameStatusToggle] = useState(false);
+
 	const { data: gameStatus, isLoading: fetchingGameStatus } = useGameStatus();
 	const queryClient = useQueryClient();
 
@@ -30,13 +31,11 @@ const GameControl: React.FC = () => {
 			const data = await response.json();
 
 			if (response.ok) {
-				console.log(data);
 				toast.success(
 					`Game has ${formData.action === "start" ? "started" : "stopped"}`
 				);
 			} else {
 				// Handle specific error states and display appropriate error messages
-				console.log(response.status);
 				if (response.status === 400) {
 					toast.error(data.error || "Failed to submit flag");
 				} else {

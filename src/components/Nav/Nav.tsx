@@ -65,6 +65,14 @@ const Nav = () => {
 									Leaderboard
 								</Link>
 							</li>
+							<li>
+								<Link
+									to="/username"
+									onClick={clickHandler}
+									className="text-fs-body-3 text-clr-gdg-green-800 font-medium lg:after:w-[0px] lg:after:mx-auto lg:after:h-[2px] lg:after:block lg:after:bg-clr-gdg-green lg:after:transition-[width] lg:after:duration-150 lg:after:ease-linear lg:hover:after:w-full">
+									Username
+								</Link>
+							</li>
 							{/* Uncomment if we do add the chat feature */}
 							{/* <li>
 								<Link

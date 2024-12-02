@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Instructions from "./pages/Instructions";
 import Leaderboard from "./pages/Leaderboard";
 import SubmitFlag from "./pages/Submit";
+import { UsernamePage } from "./pages/Username";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ export default function App() {
 						<Route path="/leaderboard" element={<Leaderboard />} />
 						<Route path="/ctf" element={<SubmitFlag />} />
 						<Route path="/game-control" element={<GameControl />} />
+						<Route path="/username" element={<UsernamePage />} />
 						<Route
 							path="/sxctra249sceahceae34hec/:flag"
 							element={<FlagPage />}

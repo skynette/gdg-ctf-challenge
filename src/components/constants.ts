@@ -40,6 +40,8 @@ export const SERVER_URL =
 
 export const GAME_STATUS_QUERY_KEY = "game-status";
 
+export const USER_QUERY_KEY = "current-user";
+
 export const codersData = [
 	{
 		name: "Joshua Hassan",
@@ -156,3 +158,24 @@ export const EVENTS_PICTURES: { url: string; flag?: string }[] = [
 		flag: flags.tricky_fl4g,
 	},
 ];
+
+/**
+ * Cookies options keys and values
+ *
+ * @property {number | Date | undefined} expires
+ * @property {string | undefined} path
+ * @property {string | undefined} domain
+ * @property {boolean | undefined} secure
+ * @property {"strict" | "Strict" | "lax" | "Lax" | "none" | "None" | undefined} sameSite
+ */
+
+export const USER_COOKIES_OPTS = {
+	expires: 3,
+	path: "/",
+	domain: import.meta.env.PROD ? "gdg-benin.vercel.app" : "localhost",
+	secure: import.meta.env.PROD,
+	sameSite: "lax" as const,
+};
+
+export const USER_COOKIES_NAME = "__devfest_24_user";
+export const USER_TOKEN_COOKIES_NAME = "__devfest_24_user_token";
